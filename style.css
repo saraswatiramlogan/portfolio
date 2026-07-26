@@ -329,3 +329,19 @@ hr {
 }
 
 }
+.about-content {
+    flex-direction: column;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-text {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+}
