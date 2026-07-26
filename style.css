@@ -289,18 +289,20 @@ html {
     padding: 40px 20px;
 
     color: black;
-}
 .hero h1 {
     font-size: 60px !important;
     font-weight: 700;
     line-height: 1.1;
     margin: 0 0 15px;
+    text-shadow: 2px 2px 8px rgba(255,255,255,0.8);
 }
 
 .hero h2 {
     font-size: 24px !important;
     font-weight: normal;
     margin: 0 0 35px;
+    text-shadow: 2px 2px 8px rgba(255,255,255,0.8);
+
 }
 #contact h2 {
     margin-top: 50px;
