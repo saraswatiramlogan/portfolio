@@ -324,24 +324,60 @@ hr {
     border-top: 1px solid #ddd;
 }
 @media (max-width: 768px) {
-    .hero h1 {
-    font-size: 2.5rem !important;
-}
 
-}
-.about-content {
-    flex-direction: column;
-}
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.about-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 0 auto;
-}
+    .project-image {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 8 / 11;
+    }
 
-.about-text {
-    width: 100%;
-    max-width: none;
-    text-align: center;
+    .project-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .headshot-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .headshot-placeholder img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+
 }
