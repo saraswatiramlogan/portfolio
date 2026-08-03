@@ -197,6 +197,13 @@ html {
     display: block;
     border-radius: 10px;
 }
+.fullbody-placeholder img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
 .headshot-placeholder {
     overflow: hidden;
     border-radius: 10px;
