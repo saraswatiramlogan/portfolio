@@ -106,7 +106,14 @@
 
     <h2>Featured Headshots</h2>
 
-    <div class="headshot-grid">
+    <div class="headshot-carousel">
+
+    <button class="carousel-btn left" onclick="scrollHeadshots(-1)">&#10094;</button>
+
+    <div class="headshot-grid" id="headshotGrid">
+
+         <!-- all your existing headshot blocks stay here -->
+
 
      <div class="headshot-placeholder">
     <a href="images/headshot1.jpeg" target="_blank">
@@ -158,9 +165,13 @@
          <div class="headshot-placeholder">
     <a href="images/headshot9.jpeg" target="_blank">
         <img src="images/headshot9.jpeg" alt="Headshot 9">
+         </div>
     </a>
     </div>
-        
+
+<button class="carousel-btn right" onclick="scrollHeadshots(1)">&#10095;</button>
+
+</div>
     </div>
 
 </section>
@@ -204,7 +215,18 @@
     <p><strong>Union Status:</strong> Non-Union</p>
 </section>
 
+<script>
+function scrollHeadshots(direction) {
+    const gallery = document.getElementById("headshotGrid");
+    const amount = gallery.clientWidth;
 
+    gallery.scrollBy({
+        left: direction * amount,
+        behavior: "smooth"
+    });
+}
+</script>
+    
 </body>
 
 </html>
