@@ -493,6 +493,7 @@ hr {
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    width: 100%;
 }
 
 .fullbody-track::-webkit-scrollbar {
