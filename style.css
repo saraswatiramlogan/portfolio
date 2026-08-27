@@ -191,6 +191,16 @@ html {
     padding: 10px 0;
     scrollbar-width: none;
 }
+.headshot-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 0;
+    scrollbar-width: none;
+}
 .headshot-grid::-webkit-scrollbar {
     display: none;
 }
