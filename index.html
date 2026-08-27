@@ -218,7 +218,7 @@
 <script>
 function scrollHeadshots(direction) {
     const gallery = document.getElementById("headshotGrid");
-    const photo = gallery.querySelector(".headshot-placeholder");
+    const photo = gallery.querySelector("a");
 
     const gap = 20;
     const amount = photo.offsetWidth + gap;
@@ -227,7 +227,24 @@ function scrollHeadshots(direction) {
         left: direction * amount,
         behavior: "smooth"
     });
+
+    setTimeout(updateCarouselButtons, 400);
 }
+
+function updateCarouselButtons() {
+    const gallery = document.getElementById("headshotGrid");
+    const leftBtn = document.querySelector(".carousel-btn.left");
+    const rightBtn = document.querySelector(".carousel-btn.right");
+
+    const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+
+    leftBtn.disabled = gallery.scrollLeft <= 5;
+    rightBtn.disabled = gallery.scrollLeft >= maxScrollLeft - 5;
+}
+
+window.addEventListener("load", updateCarouselButtons);
+
+document.getElementById("headshotGrid").addEventListener("scroll", updateCarouselButtons);
 </script>
     
 </body>
