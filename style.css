@@ -197,7 +197,7 @@ html {
     display: none;
 }
 .headshot-grid > a {
-    flex: 0 0 calc((100% - 20px) / 2);
+    flex: 0 0 100%;
     text-decoration: none;
 }
 
