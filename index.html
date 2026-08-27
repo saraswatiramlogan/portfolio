@@ -252,6 +252,35 @@ function updateCarouselButtons() {
 window.addEventListener("load", updateCarouselButtons);
 
 document.getElementById("headshotGrid").addEventListener("scroll", updateCarouselButtons);
+    function scrollFullbody(direction) {
+    const gallery = document.getElementById("fullbodyTrack");
+    const photo = gallery.querySelector(".fullbody-placeholder");
+
+    const amount = photo.offsetWidth;
+
+    gallery.scrollBy({
+        left: direction * amount,
+        behavior: "smooth"
+    });
+
+    setTimeout(updateFullbodyButtons, 400);
+}
+
+function updateFullbodyButtons() {
+    const gallery = document.getElementById("fullbodyTrack");
+    const leftBtn = document.querySelector(".fullbody-btn.left");
+    const rightBtn = document.querySelector(".fullbody-btn.right");
+
+    const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+
+    leftBtn.disabled = gallery.scrollLeft <= 5;
+    rightBtn.disabled = gallery.scrollLeft >= maxScrollLeft - 5;
+}
+
+window.addEventListener("load", updateFullbodyButtons);
+
+document.getElementById("fullbodyTrack")
+    .addEventListener("scroll", updateFullbodyButtons);
 </script>
     
 </body>
