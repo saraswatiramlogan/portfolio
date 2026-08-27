@@ -218,7 +218,10 @@
 <script>
 function scrollHeadshots(direction) {
     const gallery = document.getElementById("headshotGrid");
-    const amount = gallery.clientWidth;
+    const photo = gallery.querySelector(".headshot-placeholder");
+
+    const gap = 20;
+    const amount = photo.offsetWidth + gap;
 
     gallery.scrollBy({
         left: direction * amount,
