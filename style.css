@@ -538,3 +538,36 @@ hr {
 .fullbody-btn.right {
     right: 10px;
 }
+.fullbody-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.fullbody-track::-webkit-scrollbar {
+    display: none;
+}
+
+.fullbody-placeholder {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fullbody-placeholder a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fullbody-placeholder img {
+    width: auto;
+    max-width: 420px;
+    max-height: 650px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
