@@ -458,6 +458,11 @@ hr {
 .carousel-btn:hover {
     background: black;
 }
+.carousel-btn:disabled {
+    opacity: 0.2;
+    cursor: default;
+    pointer-events: none;
+}
     
 /* HEADSHOT DISPLAY FIX */
 
