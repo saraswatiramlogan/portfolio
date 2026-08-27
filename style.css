@@ -181,15 +181,7 @@ html {
 .project-info a:hover {
     background: black;
     color: white;
-}
-.headshot-grid {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    max-width:900px ;
-    margin: 0 auto;
-    padding: 10px 0;
-    scrollbar-width: none;
+
 }
 .headshot-grid {
     display: flex;
@@ -216,14 +208,7 @@ html {
     display: block;
     border-radius: 10px;
 
-}
 
-.headshot-placeholder img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
 }
 .fullbody-placeholder img {
     width: 100%;
@@ -382,9 +367,13 @@ hr {
     }
 
     .headshot-grid {
-        grid-template-columns: 1fr;
-        max-width: 350px;
-    }
+    max-width: 100%;
+}
+
+.headshot-placeholder {
+    flex: 0 0 100%;
+}
+    
 
     .headshot-placeholder img {
         width: 100%;
@@ -434,13 +423,13 @@ hr {
     transform: translateY(-50%);
     z-index: 10;
 
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 70px;
 
     border: none;
-    border-radius: 50%;
+    border-radius: 6px;
 
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.35);
     color: white;
 
     font-size: 36px;
@@ -453,11 +442,11 @@ hr {
 }
 
 .carousel-btn.left {
-    left: -70px;
+    left: -10px;
 }
 
 .carousel-btn.right {
-    right: -70px;
+    right: -10px;
 }
 
 .carousel-btn:hover {
