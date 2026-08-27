@@ -462,44 +462,12 @@ hr {
     
 /* HEADSHOT DISPLAY FIX */
 
+
+/* FIX HEADSHOT CROPPING */
+
 .headshot-placeholder img {
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    border-radius: 10px;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
 }
-
-
-/* MOBILE CAROUSEL FIX */
-
-@media (max-width: 768px) {
-
-    .carousel-btn {
-        width: 34px;
-        height: 64px;
-        font-size: 26px;
-        border-radius: 8px;
-        background: rgba(0, 0, 0, 0.55);
-        color: white;
-    }
-
-    .carousel-btn.left {
-        left: 8px;
-    }
-
-    .carousel-btn.right {
-        right: 8px;
-    }
-
-    .carousel-btn:hover {
-        background: rgba(0, 0, 0, 0.55);
-    }
-
-    .headshot-placeholder img {
-        height: 400px;
-        object-fit: contain;
-    }
-}
-
