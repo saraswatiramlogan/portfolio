@@ -477,3 +477,64 @@ hr {
     object-fit: contain !important;
     object-position: center !important;
 }
+/* FULL BODY CAROUSEL */
+
+.fullbody-carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.fullbody-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.fullbody-track::-webkit-scrollbar {
+    display: none;
+}
+
+.fullbody-placeholder {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fullbody-placeholder img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+.fullbody-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 40px;
+    height: 70px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fullbody-btn.left {
+    left: 10px;
+}
+
+.fullbody-btn.right {
+    right: 10px;
+}
