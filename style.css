@@ -756,29 +756,14 @@ hr {
         grid-template-columns: 1fr;
     }
 }
-/* ALIGN SIDE-BY-SIDE GALLERY PHOTOS */
+/* ENLARGE FULL BODY PHOTOS ON DESKTOP */
 
 @media (min-width: 769px) {
-
-    .gallery-row .fullbody-track,
-    .gallery-row .headshot-grid {
-        height: 540px;
-        padding: 0;
-    }
-
-    .gallery-row .fullbody-placeholder,
-    .gallery-row .headshot-placeholder {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .gallery-row .fullbody-placeholder img,
-    .gallery-row .headshot-placeholder img {
-        height: 540px !important;
-        width: auto !important;
+    .gallery-row .fullbody-placeholder img {
+        height: 620px;
+        width: auto;
         max-width: 100%;
-        object-fit: contain !important;
+        max-height: none;
+        object-fit: contain;
     }
 }
