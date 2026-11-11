@@ -57,7 +57,7 @@ html {
     min-height: 100vh;
     padding: 80px 20px;
     text-align: center;
-    background-color: white;
+    background-color: transparent;
     color: black;
 }
 
