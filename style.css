@@ -306,7 +306,7 @@ html {
 
 }
 .hero-with-image {
-    min-height: 100vh;
+    min-height: auto;
 
     background-image: none;
     background-size: contain;
