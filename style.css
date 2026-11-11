@@ -597,14 +597,31 @@ hr {
     pointer-events: none;
 }
 
-/* DESKTOP — two aligned rows inside each of the two columns. */
+/* DESKTOP — ONE shared invisible table: 2 columns x 2 aligned rows. */
 @media (min-width: 769px) {
-    .gallery-row .section {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
+    .gallery-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: 84px 560px;
-        align-content: start;
+        column-gap: 30px;
+        row-gap: 0;
+        align-items: stretch;
     }
+
+    /* Each gallery spans BOTH rows of the same parent grid. */
+    .gallery-row > .section {
+        display: grid;
+        grid-row: 1 / span 2;
+        grid-template-rows: subgrid;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0;
+        margin: 0;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .gallery-row > #full-body { grid-column: 1; }
+    .gallery-row > #featured-headshots { grid-column: 2; }
+
     .gallery-row .fullbody-carousel,
     .gallery-row .headshot-carousel,
     .gallery-row .fullbody-track,
@@ -612,9 +629,12 @@ hr {
     .gallery-row .fullbody-placeholder,
     .gallery-row .headshot-placeholder {
         height: 560px;
+        min-width: 0;
     }
+
     .gallery-row .fullbody-placeholder img,
     .gallery-row .headshot-placeholder img {
+        display: block;
         height: 560px;
         width: auto;
         max-width: 100%;
