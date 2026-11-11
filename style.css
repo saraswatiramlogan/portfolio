@@ -791,7 +791,14 @@ hr {
     max-height: none;
     object-fit: contain;
 }
-
+@media (min-width: 769px) {
+    .gallery-row .fullbody-placeholder img {
+        height: 560px;
+        width: auto;
+        max-width: none;
+        object-fit: contain;
+    }
+}
 /* FULL BODY PHOTOS ON MOBILE */
 
 @media (max-width: 768px) {
