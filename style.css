@@ -680,3 +680,10 @@ hr {
         justify-content: center;
     }
 }
+/* ELEGANT EDITORIAL NAME */
+
+.hero-with-image h1 {
+    font-family: "Baskerville", "Palatino Linotype", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
