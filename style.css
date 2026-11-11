@@ -800,6 +800,16 @@ hr {
 /* MATCH GALLERY PHOTO HEIGHTS ON DESKTOP */
 
 @media (min-width: 769px) {
+    .gallery-row .fullbody-track,
+.gallery-row .headshot-grid {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.gallery-row .fullbody-placeholder,
+.gallery-row .headshot-placeholder {
+    align-items: flex-start;
+}
     .gallery-row .fullbody-placeholder img,
     .gallery-row .headshot-placeholder img {
         width: 100% !important;
