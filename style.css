@@ -634,3 +634,49 @@ hr {
 #about {
     padding-top: 20px;
 }
+/* ROMANTIC EDITORIAL HEADER */
+
+.hero-with-image {
+    min-height: auto;
+    padding: 20px 30px;
+}
+
+.hero-with-image .hero-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+}
+
+.hero-with-image h1 {
+    font-size: 26px !important;
+    margin: 0;
+}
+
+.hero-with-image h2,
+.hero-with-image .scroll-text {
+    display: none;
+}
+
+.hero-with-image .buttons {
+    gap: 10px;
+}
+
+.hero-with-image .buttons a {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* MOBILE HEADER */
+
+@media (max-width: 900px) {
+    .hero-with-image .hero-text {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-with-image .buttons {
+        justify-content: center;
+    }
+}
