@@ -732,7 +732,10 @@ hr {
     margin: 0 auto;
     padding: 40px 20px;
 }
-
+.gallery-row .section h2 {
+    min-height: 55px;
+    margin-bottom: 30px;
+}
 .gallery-row .section {
     width: 100%;
     max-width: none;
