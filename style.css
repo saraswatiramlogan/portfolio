@@ -744,6 +744,8 @@ hr {
     margin: 0;
     padding: 30px 0;
     box-sizing: border-box;
+    display: grid;
+grid-template-rows: 100px 560px;
 }
 
 .gallery-row .fullbody-carousel,
