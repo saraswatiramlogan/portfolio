@@ -188,58 +188,6 @@ html {
     color: white;
 
 }
-.headshot-grid {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 10px 0;
-    scrollbar-width: none;
-}
-.headshot-grid::-webkit-scrollbar {
-    display: none;
-}
-.headshot-grid > a {
-    flex: 0 0 100%;
-    text-decoration: none;
-}
-
-.headshot-placeholder {
-    flex: 0 0 100%;
-}
-
-.headshot-placeholder img {
-    width: 100%;
-    max-width: 500px;
-    height: 520px;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-.fullbody-placeholder img {
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
-    display: block;
-    border-radius: 10px;
-}
-.headshot-placeholder {
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.headshot-placeholder img {
-    transition: transform 0.3s ease;
-}
-
-.headshot-placeholder:hover img {
-    transform: scale(1.05);
-}
 .about-content {
     display: flex;
     align-items: center;
@@ -377,22 +325,6 @@ hr {
         text-align: center;
     }
 
-    .headshot-grid {
-    max-width: 100%;
-}
-
-.headshot-placeholder {
-    flex: 0 0 100%;
-}
-    .headshot-grid > a {
-        flex: 0 0 100%;
-    }
-
-    .headshot-placeholder img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
 
     .about-content {
         flex-direction: column;
@@ -422,161 +354,6 @@ hr {
 
 }
 
-/* HEADSHOT CAROUSEL ARROWS */
-
-.headshot-carousel {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-
-    width: 40px;
-    height: 70px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: rgba(0, 0, 0, 0.35);
-    color: white;
-
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-btn.left {
-    left: -10px;
-}
-
-.carousel-btn.right {
-    right: -10px;
-}
-
-.carousel-btn:hover {
-    background: black;
-}
-.carousel-btn:disabled {
-    opacity: 0.2;
-    cursor: default;
-    pointer-events: none;
-}
-    
-/* HEADSHOT DISPLAY FIX */
-
-
-/* FIX HEADSHOT CROPPING */
-
-.headshot-placeholder img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    object-position: center !important;
-}
-/* FULL BODY CAROUSEL */
-
-.fullbody-carousel {
-    position: relative;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.fullbody-track {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    width: 100%;
-}
-
-.fullbody-track::-webkit-scrollbar {
-    display: none;
-}
-
-.fullbody-placeholder {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.fullbody-placeholder img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    border-radius: 10px;
-}
-
-.fullbody-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-
-    width: 40px;
-    height: 70px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: rgba(0, 0, 0, 0.35);
-    color: white;
-
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.fullbody-btn.left {
-    left: 10px;
-}
-
-.fullbody-btn.right {
-    right: 10px;
-}
-.fullbody-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    width: 100%;
-}
-
-.fullbody-track::-webkit-scrollbar {
-    display: none;
-}
-
-.fullbody-placeholder {
-    flex: 0 0 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.fullbody-placeholder a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.fullbody-placeholder img {
-    width: auto;
-    max-width: 100%;
-    max-height: 650px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
 #about h2,
 #contact h2 {
     font-family: Georgia, "Times New Roman", serif;
@@ -685,7 +462,12 @@ hr {
     font-weight: 400;
     letter-spacing: 1px;
 }
-/* SIDE-BY-SIDE PHOTO GALLERIES */
+
+/* ============================================================
+   PHOTO GALLERIES — one coherent set of layout/sizing rules.
+   Desktop: invisible two-column table with matching title/photo rows.
+   Mobile: galleries stack; no fixed image or track heights.
+   ============================================================ */
 
 .gallery-row {
     display: grid;
@@ -699,149 +481,174 @@ hr {
 
 .gallery-row .section {
     width: 100%;
-    max-width: none;
     min-width: 0;
+    max-width: none;
     min-height: auto;
     margin: 0;
     padding: 30px 0;
     box-sizing: border-box;
 }
 
-.gallery-row .fullbody-carousel,
-.gallery-row .headshot-carousel {
-    width: 100%;
-    max-width: 100%;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-    .gallery-row {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        
-    }
-}
-/* SIDE-BY-SIDE PHOTO GALLERIES */
-
-.gallery-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
+/* Same size title row in both columns. */
 .gallery-row .section h2 {
-    min-height: 55px;
-    margin-bottom: 30px;
-}
-.gallery-row .section {
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    min-height: auto;
+    font-size: clamp(24px, 2.5vw, 36px);
+    line-height: 1.2;
     margin: 0;
-    padding: 30px 0;
-    box-sizing: border-box;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.gallery-row .fullbody-carousel,
-.gallery-row .headshot-carousel {
+.fullbody-carousel,
+.headshot-carousel {
+    position: relative;
     width: 100%;
     max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .gallery-row {
-        grid-template-columns: 1fr;
-    }
-}
-/* ENLARGE FULL BODY PHOTOS ON DESKTOP */
-
-
-/* FIX FULL BODY PHOTO GALLERY */
-
-.fullbody-track {
+.fullbody-track,
+.headshot-grid {
     display: flex;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
+.fullbody-track::-webkit-scrollbar,
+.headshot-grid::-webkit-scrollbar {
+    display: none;
+}
 
-.fullbody-placeholder {
+/* Full-body JS scrolls by one placeholder width, so no track gap. */
+.fullbody-track { gap: 0; }
+/* Headshot JS scrolls one anchor width + 20px, so keep that gap. */
+.headshot-grid { gap: 20px; }
+
+.fullbody-placeholder,
+.headshot-placeholder {
     flex: 0 0 100%;
     min-width: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.fullbody-placeholder a {
+.fullbody-placeholder a,
+.headshot-placeholder a {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    min-width: 0;
+    height: 100%;
+    text-decoration: none;
+}
+
+.fullbody-placeholder img,
+.headshot-placeholder img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Keep both sets of existing carousel arrows and classes working. */
+.fullbody-btn,
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 70px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
-
-.gallery-row .fullbody-placeholder img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: none;
-  object-fit: contain;
+.carousel-btn { font-size: 36px; font-weight: bold; }
+.fullbody-btn.left { left: 10px; }
+.fullbody-btn.right { right: 10px; }
+.carousel-btn.left { left: -10px; }
+.carousel-btn.right { right: -10px; }
+.fullbody-btn:hover,
+.carousel-btn:hover { background: black; }
+.fullbody-btn:disabled,
+.carousel-btn:disabled {
+    opacity: 0.2;
+    cursor: default;
+    pointer-events: none;
 }
 
-/* MATCH AND ALIGN BOTH CAROUSELS ON DESKTOP */
-
-@media (min-width: 769px) {
-
-    .gallery-row .fullbody-track,
-    .gallery-row .headshot-grid {
-        height: 560px;
-        padding: 0;
-        align-items: flex-start;
-    }
-
-    .gallery-row .fullbody-placeholder,
-    .gallery-row .headshot-placeholder,
-    .gallery-row .fullbody-placeholder a,
-    .gallery-row .headshot-placeholder a {
-        height: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .gallery-row .fullbody-placeholder img,
-    .gallery-row .headshot-placeholder img {
-        height: 560px !important;
-        width: auto !important;
-        max-width: 100%;
-        max-height: none !important;
-        object-fit: contain !important; 
-    }
-}
-/* FULL BODY PHOTOS ON MOBILE */
-
-@media (max-width: 768px) {
-    .gallery-row .fullbody-placeholder img {
-        height: auto;
-        max-height: 70vh;
-    }
-}
-/* MATCH GALLERY PHOTO HEIGHTS ON DESKTOP */
-
-/* MATCH GALLERY PHOTO HEIGHTS ON DESKTOP */
-
-/* DESKTOP GALLERY ROW ALIGNMENT */
-
+/* DESKTOP — two aligned rows inside each of the two columns. */
 @media (min-width: 769px) {
     .gallery-row .section {
         display: grid;
-        grid-template-rows: 100px 560px;
+        grid-template-rows: 84px 560px;
         align-content: start;
     }
+    .gallery-row .fullbody-carousel,
+    .gallery-row .headshot-carousel,
+    .gallery-row .fullbody-track,
+    .gallery-row .headshot-grid,
+    .gallery-row .fullbody-placeholder,
+    .gallery-row .headshot-placeholder {
+        height: 560px;
+    }
+    .gallery-row .fullbody-placeholder img,
+    .gallery-row .headshot-placeholder img {
+        height: 560px;
+        width: auto;
+        max-width: 100%;
+        max-height: none;
+        object-fit: contain;
+    }
 }
- 
+
+/* MOBILE — keep scrolling working and photos uncropped. */
+@media (max-width: 768px) {
+    .gallery-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .gallery-row .section { display: block; }
+    .gallery-row .section h2 {
+        min-height: 0;
+        margin-bottom: 30px;
+    }
+    .fullbody-track,
+    .headshot-grid,
+    .fullbody-placeholder,
+    .headshot-placeholder {
+        height: auto;
+    }
+    .fullbody-placeholder img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 70vh;
+    }
+    .headshot-placeholder img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+    }
+}
