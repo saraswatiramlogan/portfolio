@@ -521,11 +521,69 @@ hr {
     }
 }
 
-/* MOBILE */
 
+/* PROFESSIONAL CASTING GALLERY */
+
+.casting-section {
+    max-width: 1000px;
+    padding: 30px 20px;
+    margin: 0 auto;
+}
+
+.casting-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: #7d3b59;
+    margin-bottom: 25px;
+}
+
+.casting-grid {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Four headshots across, two rows */
+.headshots-gallery {
+    grid-template-columns: repeat(4, 170px);
+}
+
+/* Five full-body photos across, one row */
+.fullbody-gallery {
+    grid-template-columns: repeat(5, 145px);
+}
+
+.casting-grid a {
+    display: block;
+    min-width: 0;
+}
+
+.casting-grid img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.fullbody-gallery img {
+    height: 260px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .headshots-gallery,
+    .fullbody-gallery {
+        grid-template-columns: repeat(3, minmax(0, 170px));
+    }
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
     .casting-section {
-        padding: 30px 15px;
+        padding: 25px 15px;
     }
 
     .casting-section h2 {
@@ -534,7 +592,12 @@ hr {
 
     .headshots-gallery,
     .fullbody-gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 150px));
         gap: 12px;
+    }
+
+    .casting-grid img,
+    .fullbody-gallery img {
+        height: 220px;
     }
 }
