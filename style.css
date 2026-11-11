@@ -463,3 +463,78 @@ hr {
     letter-spacing: 1px;
 }
 
+
+/* PROFESSIONAL CASTING GALLERY */
+
+.casting-section {
+    max-width: 1200px;
+    padding: 35px 25px;
+    margin: 0 auto;
+}
+
+.casting-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #7d3b59;
+    margin-bottom: 25px;
+}
+
+.casting-grid {
+    display: grid;
+    gap: 15px;
+    align-items: start;
+}
+
+.headshots-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fullbody-gallery {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.casting-grid a {
+    display: block;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.casting-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.casting-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .headshots-gallery,
+    .fullbody-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .casting-section {
+        padding: 30px 15px;
+    }
+
+    .casting-section h2 {
+        font-size: 30px;
+    }
+
+    .headshots-gallery,
+    .fullbody-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
