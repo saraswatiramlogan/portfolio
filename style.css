@@ -805,7 +805,7 @@ hr {
     .gallery-row .headshot-placeholder img {
         height: 560px !important;
         width: auto !important;
-        max-width: 100%;
+        max-width: none !important;
         max-height: none;
         object-fit: contain !important;
     }
