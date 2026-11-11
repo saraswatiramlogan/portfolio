@@ -801,12 +801,5 @@ hr {
 
 /* MATCH GALLERY PHOTO HEIGHTS ON DESKTOP */
 
-@media (min-width: 769px) {
-    .gallery-row .fullbody-placeholder img,
-    .gallery-row .headshot-placeholder img {
-        width: 100% !important;
-        height: 560px !important;
-        max-width: 100%;
-        object-fit: contain !important;
-    }
-}
+
+ 
