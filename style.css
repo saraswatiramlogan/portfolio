@@ -687,3 +687,39 @@ hr {
     font-weight: 400;
     letter-spacing: 1px;
 }
+/* SIDE-BY-SIDE PHOTO GALLERIES */
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: start;
+}
+
+.gallery-row .section {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: auto;
+    margin: 0;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.gallery-row .fullbody-carousel,
+.gallery-row .headshot-carousel {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .gallery-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
