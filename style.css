@@ -789,14 +789,37 @@ hr {
     max-width: 100%;
     height: auto;
     max-height: none;
-    object-fit: contain;
+  object-fit: contain;
 }
+
+/* MATCH AND ALIGN BOTH CAROUSELS ON DESKTOP */
+
 @media (min-width: 769px) {
-    .gallery-row .fullbody-placeholder img {
+
+    .gallery-row .fullbody-track,
+    .gallery-row .headshot-grid {
         height: 560px;
-        width: auto;
-        max-width: none;
-        object-fit: contain;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .gallery-row .fullbody-placeholder,
+    .gallery-row .headshot-placeholder,
+    .gallery-row .fullbody-placeholder a,
+    .gallery-row .headshot-placeholder a {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .gallery-row .fullbody-placeholder img,
+    .gallery-row .headshot-placeholder img {
+        height: 560px !important;
+        width: auto !important;
+        max-width: 100%;
+        max-height: none !important;
+        object-fit: contain !important; 
     }
 }
 /* FULL BODY PHOTOS ON MOBILE */
