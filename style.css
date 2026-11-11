@@ -579,3 +579,11 @@ hr {
     object-fit: contain;
     display: block;
 }
+#about h2,
+#contact h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #7d3b59;
+}
