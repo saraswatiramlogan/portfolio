@@ -601,6 +601,7 @@ hr {
 @media (min-width: 769px) {
     .gallery-row .section {
         display: grid;
+        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: 84px 560px;
         align-content: start;
     }
