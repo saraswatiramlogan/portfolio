@@ -797,3 +797,17 @@ hr {
         max-height: 70vh;
     }
 }
+/* MATCH GALLERY PHOTO HEIGHTS ON DESKTOP */
+
+@media (min-width: 769px) {
+
+    .gallery-row .fullbody-placeholder img,
+    .gallery-row .headshot-placeholder img {
+        height: 560px !important;
+        width: auto !important;
+        max-width: 100%;
+        max-height: none;
+        object-fit: contain !important;
+    }
+
+}
