@@ -758,15 +758,7 @@ hr {
 }
 /* ENLARGE FULL BODY PHOTOS ON DESKTOP */
 
-@media (min-width: 769px) {
-    .gallery-row .fullbody-placeholder img {
-        height: 620px;
-        width: auto;
-        max-width: 100%;
-        max-height: none;
-        object-fit: contain;
-    }
-}
+
 /* FIX FULL BODY PHOTO GALLERY */
 
 .fullbody-track {
