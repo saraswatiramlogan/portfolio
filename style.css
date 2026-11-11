@@ -587,3 +587,45 @@ hr {
     letter-spacing: 1px;
     color: #7d3b59;
 }
+/* ROMANTIC EDITORIAL ABOUT LAYOUT */
+
+#about .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#about .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+#about .about-image img {
+    width: 45%;
+    max-width: 350px;
+    height: 440px;
+    object-fit: contain;
+}
+
+#about .about-text {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+    #about .about-image {
+        flex-direction: column;
+    }
+
+    #about .about-image img {
+        width: 100%;
+        height: auto;
+        max-height: 440px;
+    }
+}
