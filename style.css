@@ -800,14 +800,11 @@ hr {
 /* MATCH GALLERY PHOTO HEIGHTS ON DESKTOP */
 
 @media (min-width: 769px) {
-
     .gallery-row .fullbody-placeholder img,
     .gallery-row .headshot-placeholder img {
+        width: 100% !important;
         height: 560px !important;
-        width: auto !important;
-        max-width: none !important;
-        max-height: none;
+        max-width: 100%;
         object-fit: contain !important;
     }
-
 }
